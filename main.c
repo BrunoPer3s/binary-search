@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 
-int buscaBinaria(int arr[], int key, int leftIndex, int rightIndex) {
+int binarySearch(int arr[], int key, int leftIndex, int rightIndex) {
   int midIndex = leftIndex + (rightIndex - leftIndex) / 2;
   if(leftIndex > rightIndex) return -1;
   if(key == arr[midIndex]) return midIndex;
@@ -30,7 +30,7 @@ int main() {
   printf("Key Value\n");
   scanf("%d", &key);
 
-  printf("found in sorted[%d]", buscaBinaria(sorted, key, 0, 99));
+  printf("found in sorted[%d]", binarySearch(sorted, key, 0, 99));
 
   end = clock();
   printf("\n\nTempo: %5.2f seg.\n", ((double)(end - start)) / CLOCKS_PER_SEC);
